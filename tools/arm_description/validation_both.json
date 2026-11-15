@@ -1,0 +1,23 @@
+{
+  "mujoco_version": "3.7.0",
+  "pinocchio_version": "4.1.0",
+  "configurations": 50,
+  "max_abs_errors": {
+    "fk_mujoco": 7.771561172376096e-16,
+    "fk_pinocchio": 7.216449660063518e-16,
+    "jacobian": 8.326672684688674e-16,
+    "mass_matrix": 3.917929591867875e-09,
+    "gravity": 4.440892098500626e-15
+  },
+  "gravity_compensated_steps": 1000,
+  "passed": true,
+  "hardware_dynamics_validated": false,
+  "collision_acceptance_validated": false,
+  "cad_mass_kg": 5.158187186790701,
+  "export_mass_kg": 5.158187186790703,
+  "cad_conservation_errors": {
+    "cad_mass_conservation_error_kg": 1.7763568394002505e-15,
+    "cad_com_conservation_error_m": 4.443059973708341e-17,
+    "cad_inertia_conservation_error_kg_m2": 8.326672684688674e-17
+  }
+}

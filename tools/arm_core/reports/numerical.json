@@ -1,0 +1,27 @@
+{
+  "samples": 300,
+  "max_errors": {
+    "fk_position": 8.952485991420289e-08,
+    "fk_rotation": 3.108771119419984e-07,
+    "jacobian": 1.9061908873574396e-07,
+    "mass": 1.4267640424669992e-07,
+    "gravity": 2.7410936080940473e-06,
+    "rnea": 3.2139154391153113e-06,
+    "com": 4.287002591807365e-08,
+    "sigma": 2.0853476598858833e-06
+  },
+  "tolerances": {
+    "fk_position": 2e-06,
+    "fk_rotation": 2e-06,
+    "jacobian": 2e-06,
+    "mass": 2e-05,
+    "gravity": 0.0001,
+    "rnea": 0.0002,
+    "com": 2e-06,
+    "sigma": 3e-05
+  },
+  "ik_near_seed_success": 300,
+  "host_gravity_us_max_with_ctypes": 57.50000000048772,
+  "hardware_timing_measured": false,
+  "passed": true
+}

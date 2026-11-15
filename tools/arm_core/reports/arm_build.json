@@ -1,0 +1,374 @@
+{
+  "target": "Cortex-M4 fpv4-sp-d16 hard-float C11 O2",
+  "library": "build/cortex_m4/libarm_core.a",
+  "size_output": "   text\t   data\t    bss\t    dec\t    hex\tfilename\n   3192\t      0\t      0\t   3192\t    c78\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_collision.o\n   2872\t      0\t      0\t   2872\t    b38\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_control.o\n   2048\t      0\t      0\t   2048\t    800\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_dynamics.o\n   1428\t      0\t      0\t   1428\t    594\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_io.o\n   2632\t      0\t      0\t   2632\t    a48\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_kinematics.o\n   2756\t      0\t      0\t   2756\t    ac4\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_math.o\n   3456\t      0\t      0\t   3456\t    d80\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_model.o\n   2388\t      0\t      0\t   2388\t    954\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_plan.o\n   1896\t      0\t      0\t   1896\t    768\tD:\\2027_Heavy\\arm_core\\build\\cortex_m4\\arm_validate.o\n",
+  "static_stack_per_function": [
+    {
+      "function": "ArmApplication_Init",
+      "bytes": 560,
+      "allocation": "static"
+    },
+    {
+      "function": "prepare",
+      "bytes": 424,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_ik",
+      "bytes": 408,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_motor_plan_validate",
+      "bytes": 360,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_collision",
+      "bytes": 344,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_sigma",
+      "bytes": 224,
+      "allocation": "static"
+    },
+    {
+      "function": "rnea",
+      "bytes": 192,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_control_stop",
+      "bytes": 184,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_step",
+      "bytes": 176,
+      "allocation": "static"
+    },
+    {
+      "function": "valid_map",
+      "bytes": 176,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_velocity",
+      "bytes": 168,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_singularity",
+      "bytes": 160,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_pose_lerp",
+      "bytes": 160,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_mass_matrix",
+      "bytes": 152,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_kin",
+      "bytes": 144,
+      "allocation": "static"
+    },
+    {
+      "function": "snapshot",
+      "bytes": 136,
+      "allocation": "static"
+    },
+    {
+      "function": "overlap",
+      "bytes": 136,
+      "allocation": "static"
+    },
+    {
+      "function": "ArmApplication_Update",
+      "bytes": 128,
+      "allocation": "static"
+    },
+    {
+      "function": "ArmApplication_Reset",
+      "bytes": 112,
+      "allocation": "static"
+    },
+    {
+      "function": "ArmApplication_Target",
+      "bytes": 96,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_rotation_error",
+      "bytes": 88,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_jac",
+      "bytes": 80,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_plan_sample",
+      "bytes": 80,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_model_validate",
+      "bytes": 72,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_quat",
+      "bytes": 64,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_fk",
+      "bytes": 56,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_solve6",
+      "bytes": 56,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_gravity",
+      "bytes": 48,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_bias",
+      "bytes": 48,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_motor_state",
+      "bytes": 48,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorControl",
+      "bytes": 40,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorSetMITPositionVelocity.part.0",
+      "bytes": 32,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorInit",
+      "bytes": 32,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_control_init.part.0",
+      "bytes": 24,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_rnea",
+      "bytes": 24,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_motor_torque",
+      "bytes": 24,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_rot",
+      "bytes": 24,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorDecode",
+      "bytes": 24,
+      "allocation": "static"
+    },
+    {
+      "function": "mit_ctrl",
+      "bytes": 24,
+      "allocation": "static"
+    },
+    {
+      "function": "cap_world",
+      "bytes": 20,
+      "allocation": "static"
+    },
+    {
+      "function": "obb_world",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_control_start",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_tcp",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_jacobian",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_com",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_plan_joint",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_plan_line",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorSetRef",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorSetTorque",
+      "bytes": 16,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorResetFault",
+      "bytes": 8,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorIsOnline",
+      "bytes": 8,
+      "allocation": "static"
+    },
+    {
+      "function": "state_check",
+      "bytes": 4,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_control_init",
+      "bytes": 4,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_control_reset",
+      "bytes": 4,
+      "allocation": "static"
+    },
+    {
+      "function": "knot_derivatives",
+      "bytes": 4,
+      "allocation": "static"
+    },
+    {
+      "function": "stop_ref",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_result_string",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_pose_rotation",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "arm_model_default",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "rotation",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorLostCallback",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "float_to_uint",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "uint_to_float",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "pos_ctrl",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorEnableMode",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorDisableMode",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorErrorDetection",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorStop",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorEnable1",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorDisable1",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorSetMITPosition",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorSetMITPositionVelocity",
+      "bytes": 0,
+      "allocation": "static"
+    },
+    {
+      "function": "DMMotorSetPos",
+      "bytes": 0,
+      "allocation": "static"
+    }
+  ],
+  "on_board_WCET_measured": false,
+  "warning": "Static per-function stack is not call-chain stack/high-water mark; libm and RTOS overhead not measured. Link -lm. No full firmware or hardware acceptance yet."
+}

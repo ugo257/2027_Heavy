@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="heavy_arm_6r_locked_gripper">
+  <compiler angle="radian" meshdir="../../arm_description/meshes" inertiafromgeom="false" />
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="base_link.stl" />
+    <mesh name="link_1" content_type="model/stl" file="link_1.stl" />
+    <mesh name="link_2" content_type="model/stl" file="link_2.stl" />
+    <mesh name="link_3" content_type="model/stl" file="link_3.stl" />
+    <mesh name="link_4" content_type="model/stl" file="link_4.stl" />
+    <mesh name="link_5" content_type="model/stl" file="link_5.stl" />
+    <mesh name="link_6" content_type="model/stl" file="link_6.stl" />
+  </asset>
+  <worldbody>
+    <body name="base_link">
+      <inertial pos="0.05026913919340493 -0.02331553579858036 0.02744054558999704" mass="1.401757297514218" fullinertia="0.009083561109848468 0.01432118453518879 0.01966326842753314 2.258642331207434e-05 -7.405091704458009e-06 -0.001156940062231409" />
+      <geom name="base_link_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.25 0.29 0.34 1" mesh="base_link" />
+      <geom name="base_link_box_proxy" size="0.25 0.16 0.0607022" pos="0.05 -0.05 0.0357022" type="box" rgba="0.25 0.29 0.34 1" contype="0" conaffinity="0" group="3" />
+      <body name="link_1" pos="0.04999999999999999 -0.0512499999999988 0.05799999999999999">
+        <inertial pos="0.1290778100861728 -0.01848284953776073 0.1016105850668222" mass="0.6822860233090371" fullinertia="0.006930187776969333 0.01578631458629028 0.01049781756825746 -0.001617580285749319 -0.007432466269458281 -0.001282090377352759" />
+        <joint name="joint_1" pos="0 0 0" axis="-3.848801888565931e-16 1 4.667822005438488e-16" />
+        <geom name="link_1_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.18 0.2 0.23 1" mesh="link_1" />
+        <geom name="link_1_box_proxy" size="0.172855 0.0591158 0.143643" pos="0.134972 -0.0112625 0.106147" type="box" rgba="0.18 0.2 0.23 1" contype="0" conaffinity="0" group="3" />
+        <body name="link_2" pos="0.2711977536887711 0.03349999999999995 0.2132528508465121">
+          <inertial pos="-0.05671546081363378 -0.03148678860126012 0.05010277930849209" mass="0.7414284176359418" fullinertia="0.001422128495629224 0.001721127392200844 0.001901986569189239 6.204939915690972e-05 0.000409249026201525 -6.825449127064843e-05" />
+          <joint name="joint_2" pos="0 0 0" axis="4.093384219239206e-16 1 2.699838688368046e-16" />
+          <geom name="link_2_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.6 0.63 0.68 1" mesh="link_2" />
+          <geom name="link_2_box_proxy" size="0.0866993 0.067041 0.074404" pos="-0.0488332 -0.036309 0.036909" type="box" rgba="0.6 0.63 0.68 1" contype="0" conaffinity="0" group="3" />
+          <body name="link_3" pos="-0.07907594024737852 -0.03349999999999995 0.05920964600114653">
+            <inertial pos="-0.1543288499883488 -0.009693356019258116 -0.006198121096412147" mass="0.8640409268149232" fullinertia="0.001305864878577029 0.003312668756732386 0.004052566281053337 -0.0001453694613032325 -0.0001179552400513531 -1.378192757519215e-05" />
+            <joint name="joint_3" pos="0 0 0" axis="-0.9992509413287975 3.075788547810248e-17 -0.03869827197062238" />
+            <geom name="link_3_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.24 0.27 0.31 1" mesh="link_3" />
+            <geom name="link_3_box_proxy" size="0.140577 0.0666575 0.0362774" pos="-0.140291 0.00255753 -0.00608878" type="box" rgba="0.24 0.27 0.31 1" contype="0" conaffinity="0" group="3" />
+            <body name="link_4" pos="-0.2469149076028078 -0.05799999999998679 -0.009562343003959306">
+              <inertial pos="-0.0006066284453253925 0.0549983824727374 0.01613518760426076" mass="0.6774267822070007" fullinertia="0.0006004274995465606 0.0003609681659018396 0.0006633569068553224 1.831001920138833e-06 -2.045219666599147e-06 -2.90184383777617e-05" />
+              <joint name="joint_4" pos="0 0 0" axis="-1.880575994285889e-16 1 -3.775477792299142e-16" />
+              <geom name="link_4_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.65 0.67 0.71 1" mesh="link_4" />
+              <geom name="link_4_box_proxy" size="0.0383084 0.06005 0.0305691" pos="3.86983e-05 0.05395 0.0115693" type="box" rgba="0.65 0.67 0.71 1" contype="0" conaffinity="0" group="3" />
+              <body name="link_5" pos="-0.00160597828677846 0.05800000000000138 0.04146891406514519">
+                <inertial pos="-0.002403335827565449 -0.001090391608899918 0.0497225901280151" mass="0.2867121556704104" fullinertia="0.0002542924849475266 0.0002470469291252906 0.000171502650769099 -5.306342822268592e-06 1.523379147680291e-06 4.832269816252503e-06" />
+                <joint name="joint_5" pos="0 0 0" axis="-0.03869827197062155 2.932460122066175e-16 0.9992509413287974" />
+                <geom name="link_5_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.45 0.49 0.56 1" mesh="link_5" />
+                <geom name="link_5_box_proxy" size="0.046512 0.0463729 0.0620217" pos="-0.0013543 8.56639e-12 0.0327698" type="box" rgba="0.45 0.49 0.56 1" contype="0" conaffinity="0" group="3" />
+                <body name="link_6" pos="-0.01147370308941253 -0.008015481000974552 0.05859988226727852">
+                  <inertial pos="-0.04253609579803067 -0.03713614441019327 -0.001809159914232829" mass="0.5045355836391712" fullinertia="0.0009038505178734952 0.000944517995101808 0.0005392727620489267 -9.892727514445623e-05 0.0001352846089518241 -0.0001361270691774217" />
+                  <joint name="joint_6" pos="0 0 0" axis="-0.7533200855035461 -0.6570066394243989 -0.02917403861634697" />
+                  <geom name="link_6_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.3 0.34 0.4 1" mesh="link_6" />
+                  <geom name="link_6_box_proxy" size="0.0595985 0.0546937 0.0984985" pos="-0.0420869 -0.0415167 -0.00176899" type="box" rgba="0.3 0.34 0.4 1" contype="0" conaffinity="0" group="3" />
+                  <body name="tool_mount" quat="0.6676477599043013 0.6063602762902995 -0.3832939272220799 -0.199146803606272">
+                    <body name="tcp" pos="0 0 0.086526865671642" quat="0.7071067811865475 0 0 0.7071067811865475">
+                      <site name="tcp" size="0.006" rgba="0.2 0.9 0.15 1" />
+                    </body>
+                    <site name="tool_site" size="0.006" rgba="0.95 0.2 0.15 1" />
+                  </body>
+                  <geom name="proxy_14" type="box" pos="-0.04625385333129699 -0.040340207731642236 -0.001791285974189094" size="0.1014999970793724 0.022956734523177147 0.0035000001080334187" quat="0.3312802031906893 0.6997911983333677 0.15773172808069671 -0.6129163137539756" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+                  <geom name="proxy_15" type="box" pos="-0.05530669846279307 -0.06791653875332107 -0.05534839967897964" size="0.020999999716877937 0.032249998301267624 0.006000000052154064" quat="0.3312802031906885 0.6997911983333677 0.15773172808069738 -0.612916313753976" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+                  <geom name="proxy_16" type="box" pos="-0.07712697264729872 -0.04758522852603031 0.05021960368719541" size="0.020999999716877937 0.032249998301267624 0.006000000052154064" quat="-0.6129163137539766 -0.157731728080697 0.6997911983333669 -0.3312802031906894" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+                  <geom name="proxy_17" type="box" pos="-0.09008494180264359 -0.024280086187661434 0.03136260826367043" size="0.015250000171363354 0.007000000216066837 0.006000000052154064" quat="-0.15773172808069713 0.6129163137539765 0.33128020319068946 0.6997911983333669" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+                  <geom name="proxy_18" type="box" pos="-0.03481552829525793 -0.0846516145603837 -0.03619966386320511" size="0.015250000171363354 0.007000000216066837 0.006000000052154064" quat="0.6997911983333676 -0.3312802031906885 0.612916313753976 0.15773172808069777" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+                </body>
+                <geom name="proxy_11" type="box" pos="-9.674578790044765e-05 6.178408548662695e-10 0.00249812736218874" size="0.0364999994635582 0.028699999675154686 0.001500000013038516" quat="0.910051108957252 0.008014395655694317 -0.017615300107442458 -0.4140440190970938" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+                <geom name="proxy_12" type="box" pos="0.01880693149499356 0.01787058060091007 0.04426095005167785" size="0.0364999994635582 0.039499999955296516 0.001500000013038516" quat="0.30522923177189626 0.28031743545467896 0.6378362768547571 0.6491703438852638" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+                <geom name="proxy_13" type="box" pos="-0.022038885237308244 -0.017542077210219158 0.04893378738370274" size="0.0364999994635582 0.04574999958276749 0.0020000000949949026" quat="0.30522923177189554 0.28031743545468024 0.6378362768547569 0.6491703438852638" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+              </body>
+              <geom name="proxy_9" type="box" pos="-0.00011609482629157831 0.060000000327825535 0.002997753092006228" size="0.03798852488398552 0.0430000014603138 0.013000000268220915" quat="1.7737134045033162e-16 -0.019352760412955937 1.4321720308100185e-16 0.9998127177948872" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+            </body>
+            <geom name="proxy_7" type="box" pos="-0.09802651810275093 1.1920928896791416e-09 -0.0037963017026754198" size="0.032499998807907104 0.032499998807907104 0.039000000804662704" quat="-0.6932898845466358 3.6796518141830754e-16 0.7206588207919975 -4.199059374658603e-16" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+            <geom name="proxy_8" type="box" pos="-0.19420441807874778 -0.05500000018998987 -0.007521010258751792" size="0.08524999767541885 0.032499998807907104 0.004000000189989805" quat="-0.013684468122681167 -0.01368446812268108 -0.7069743526693163 0.7069743526693171" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+            <geom name="proxy_10" type="box" pos="-0.19420441817101164 0.05799999994039533 -0.007521007876352015" size="0.08524999767541885 0.032499998807907104 0.010999999940395355" quat="0.013684468122681181 -0.013684468122681336 0.7069743526693171 0.7069743526693163" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+          </body>
+          <geom name="proxy_5" type="box" pos="-0.04986140791024529 -0.077999999905005 0.03045596341932988" size="0.07857993338257074 0.06236269976943731 0.0020000000949949026" quat="0.01368446812267982 -0.01368446812267978 0.7069743526693165 0.7069743526693171" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+          <geom name="proxy_6" type="box" pos="-0.04982920310409905 0.019499999858439008 0.030458857504505665" size="0.07861222606152296 0.06236105412244797 0.010499999858438969" quat="0.013684468122680519 -0.01368446812268057 0.7069743526693172 0.7069743526693161" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+          <geom name="proxy_19" type="box" pos="-0.06047908711375566 -0.03350000110268585 0.07787903198125773" size="0.046500001102685935 0.03224075213074684 0.06980539672076702" quat="0.49022997869096496 0.5095827391039224 -0.5095827391039219 -0.4902299786909653" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+        </body>
+        <geom name="proxy_1" type="box" pos="0.10749650026430871 1.4901158779112578e-10 0.08452848475693286" size="0.027499999850988388 0.027499999850988388 0.16324999928474426" quat="0.8994787950119251 -1.3782044743594988e-16 0.4369644119649738 -1.252254336500665e-16" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+        <geom name="proxy_3" type="box" pos="0.24427450017668623 -0.035499999905005096 0.19208209681136018" size="0.03649995941668749 0.07074999809265137 0.0020000000949949026" quat="-0.30898049883762513 0.3089804988376253 0.6360275554864366 0.6360275554864365" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+        <geom name="proxy_4" type="box" pos="0.24427450017668645 0.040500000216066756 0.19208209681136007" size="0.03649995941668749 0.07074999809265137 0.007000000216066838" quat="-0.30898049883762524 0.30898049883762646 0.6360275554864362 0.6360275554864366" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+      </body>
+      <geom name="proxy_0" type="box" pos="0.05000000074505806 -0.05000000074505806 0.003000000026077032" size="0.05000000074505806 0.05000000074505806 0.003000000026077032" quat="1.0 0.0 0.0 0.0" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+      <geom name="proxy_2" type="box" pos="0.050000000745058046 -0.10200000037997961 0.05097003736636543" size="0.05000000074505806 0.04497004094264412 0.00800000037997961" quat="0.7071067811865475 0.7071067811865475 3.925231146709439e-17 -3.976154284186847e-17" group="3" contype="0" conaffinity="0" mass="0" rgba="0.8 0.3 0.2 0.15" />
+    </body>
+    <light pos="0.5 -0.5 1.5" dir="-0.4 0.4 -1" diffuse="0.5 0.5 0.5" />
+    <geom name="floor" type="plane" size="1 1 0.05" pos="0 0 -0.027" rgba="0.87 0.9 0.94 1" contype="0" conaffinity="0" />
+  </worldbody>
+  <option timestep="0.001" gravity="0 0 -9.81" integrator="implicitfast" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+    <headlight diffuse="0.8 0.8 0.8" ambient="0.35 0.35 0.35" specular="0.2 0.2 0.2" />
+  </visual>
+  <actuator>
+    <motor name="torque_1" joint="joint_1" gear="1" ctrllimited="true" forcelimited="false" ctrlrange="-30 30" />
+    <motor name="torque_2" joint="joint_2" gear="1" ctrllimited="true" forcelimited="false" ctrlrange="-25 25" />
+    <motor name="torque_3" joint="joint_3" gear="1" ctrllimited="true" forcelimited="false" ctrlrange="-12 12" />
+    <motor name="torque_4" joint="joint_4" gear="1" ctrllimited="true" forcelimited="false" ctrlrange="-12 12" />
+    <motor name="torque_5" joint="joint_5" gear="1" ctrllimited="true" forcelimited="false" ctrlrange="-6 6" />
+    <motor name="torque_6" joint="joint_6" gear="1" ctrllimited="true" forcelimited="false" ctrlrange="-4 4" />
+  </actuator>
+  <contact>
+    <pair geom1="proxy_0" geom2="floor" condim="3" />
+    <pair geom1="proxy_1" geom2="floor" condim="3" />
+    <pair geom1="proxy_2" geom2="floor" condim="3" />
+    <pair geom1="proxy_3" geom2="floor" condim="3" />
+    <pair geom1="proxy_4" geom2="floor" condim="3" />
+    <pair geom1="proxy_5" geom2="floor" condim="3" />
+    <pair geom1="proxy_6" geom2="floor" condim="3" />
+    <pair geom1="proxy_7" geom2="floor" condim="3" />
+    <pair geom1="proxy_8" geom2="floor" condim="3" />
+    <pair geom1="proxy_9" geom2="floor" condim="3" />
+    <pair geom1="proxy_10" geom2="floor" condim="3" />
+    <pair geom1="proxy_11" geom2="floor" condim="3" />
+    <pair geom1="proxy_12" geom2="floor" condim="3" />
+    <pair geom1="proxy_13" geom2="floor" condim="3" />
+    <pair geom1="proxy_14" geom2="floor" condim="3" />
+    <pair geom1="proxy_15" geom2="floor" condim="3" />
+    <pair geom1="proxy_16" geom2="floor" condim="3" />
+    <pair geom1="proxy_17" geom2="floor" condim="3" />
+    <pair geom1="proxy_18" geom2="floor" condim="3" />
+    <pair geom1="proxy_19" geom2="floor" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_1" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_3" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_4" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_5" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_6" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_7" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_8" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_0" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_2" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_5" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_6" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_7" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_8" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_1" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_3" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_4" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_5" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_6" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_7" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_8" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_2" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_5" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_6" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_7" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_8" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_3" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_5" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_7" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_8" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_4" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_7" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_8" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_5" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_7" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_8" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_6" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_7" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_9" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_8" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_10" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_9" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_11" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_12" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_13" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_10" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_11" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_11" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_11" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_11" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_11" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_11" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_12" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_12" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_12" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_12" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_12" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_12" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_13" geom2="proxy_14" condim="3" />
+    <pair geom1="proxy_13" geom2="proxy_15" condim="3" />
+    <pair geom1="proxy_13" geom2="proxy_16" condim="3" />
+    <pair geom1="proxy_13" geom2="proxy_17" condim="3" />
+    <pair geom1="proxy_13" geom2="proxy_18" condim="3" />
+    <pair geom1="proxy_13" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_14" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_15" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_16" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_17" geom2="proxy_19" condim="3" />
+    <pair geom1="proxy_18" geom2="proxy_19" condim="3" />
+  </contact>
+</mujoco>

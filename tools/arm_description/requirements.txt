@@ -1,0 +1,9 @@
+mujoco==3.7.0
+numpy
+pillow
+scipy
+trimesh
+fast-simplification==0.2.0
+pywin32; sys_platform == "win32"
+# Pinocchio Python distribution is named "pin". Tested in Ubuntu WSL2.
+pin==4.1.0; sys_platform == "linux"

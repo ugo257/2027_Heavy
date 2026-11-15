@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="heavy_arm_6r_locked_gripper">
+  <compiler angle="radian" meshdir="meshes" inertiafromgeom="false" />
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="base_link.stl" />
+    <mesh name="link_1" content_type="model/stl" file="link_1.stl" />
+    <mesh name="link_2" content_type="model/stl" file="link_2.stl" />
+    <mesh name="link_3" content_type="model/stl" file="link_3.stl" />
+    <mesh name="link_4" content_type="model/stl" file="link_4.stl" />
+    <mesh name="link_5" content_type="model/stl" file="link_5.stl" />
+    <mesh name="link_6" content_type="model/stl" file="link_6.stl" />
+  </asset>
+  <worldbody>
+    <body name="base_link">
+      <inertial pos="0.05026913919340493 -0.02331553579858036 0.02744054558999704" mass="1.401757297514218" fullinertia="0.009083561109848468 0.01432118453518879 0.01966326842753314 2.258642331207434e-05 -7.405091704458009e-06 -0.001156940062231409" />
+      <geom name="base_link_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.25 0.29 0.34 1" mesh="base_link" />
+      <geom name="base_link_box_proxy" size="0.25 0.16 0.0607022" pos="0.05 -0.05 0.0357022" type="box" rgba="0.25 0.29 0.34 1" contype="0" conaffinity="0" group="3" />
+      <body name="link_1" pos="0.04999999999999999 -0.0512499999999988 0.05799999999999999">
+        <inertial pos="0.1290778100861728 -0.01848284953776073 0.1016105850668222" mass="0.6822860233090371" fullinertia="0.006930187776969333 0.01578631458629028 0.01049781756825746 -0.001617580285749319 -0.007432466269458281 -0.001282090377352759" />
+        <joint name="joint_1" pos="0 0 0" axis="-3.848801888565931e-16 1 4.667822005438488e-16" />
+        <geom name="link_1_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.18 0.2 0.23 1" mesh="link_1" />
+        <geom name="link_1_box_proxy" size="0.172855 0.0591158 0.143643" pos="0.134972 -0.0112625 0.106147" type="box" rgba="0.18 0.2 0.23 1" contype="0" conaffinity="0" group="3" />
+        <body name="link_2" pos="0.2711977536887711 0.03349999999999995 0.2132528508465121">
+          <inertial pos="-0.05671546081363378 -0.03148678860126012 0.05010277930849209" mass="0.7414284176359418" fullinertia="0.001422128495629224 0.001721127392200844 0.001901986569189239 6.204939915690972e-05 0.000409249026201525 -6.825449127064843e-05" />
+          <joint name="joint_2" pos="0 0 0" axis="4.093384219239206e-16 1 2.699838688368046e-16" />
+          <geom name="link_2_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.6 0.63 0.68 1" mesh="link_2" />
+          <geom name="link_2_box_proxy" size="0.0866993 0.067041 0.074404" pos="-0.0488332 -0.036309 0.036909" type="box" rgba="0.6 0.63 0.68 1" contype="0" conaffinity="0" group="3" />
+          <body name="link_3" pos="-0.07907594024737852 -0.03349999999999995 0.05920964600114653">
+            <inertial pos="-0.1543288499883488 -0.009693356019258116 -0.006198121096412147" mass="0.8640409268149232" fullinertia="0.001305864878577029 0.003312668756732386 0.004052566281053337 -0.0001453694613032325 -0.0001179552400513531 -1.378192757519215e-05" />
+            <joint name="joint_3" pos="0 0 0" axis="-0.9992509413287975 3.075788547810248e-17 -0.03869827197062238" />
+            <geom name="link_3_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.24 0.27 0.31 1" mesh="link_3" />
+            <geom name="link_3_box_proxy" size="0.140577 0.0666575 0.0362774" pos="-0.140291 0.00255753 -0.00608878" type="box" rgba="0.24 0.27 0.31 1" contype="0" conaffinity="0" group="3" />
+            <body name="link_4" pos="-0.2469149076028078 -0.05799999999998679 -0.009562343003959306">
+              <inertial pos="-0.0006066284453253925 0.0549983824727374 0.01613518760426076" mass="0.6774267822070007" fullinertia="0.0006004274995465606 0.0003609681659018396 0.0006633569068553224 1.831001920138833e-06 -2.045219666599147e-06 -2.90184383777617e-05" />
+              <joint name="joint_4" pos="0 0 0" axis="-1.880575994285889e-16 1 -3.775477792299142e-16" />
+              <geom name="link_4_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.65 0.67 0.71 1" mesh="link_4" />
+              <geom name="link_4_box_proxy" size="0.0383084 0.06005 0.0305691" pos="3.86983e-05 0.05395 0.0115693" type="box" rgba="0.65 0.67 0.71 1" contype="0" conaffinity="0" group="3" />
+              <body name="link_5" pos="-0.00160597828677846 0.05800000000000138 0.04146891406514519">
+                <inertial pos="-0.002403335827565449 -0.001090391608899918 0.0497225901280151" mass="0.2867121556704104" fullinertia="0.0002542924849475266 0.0002470469291252906 0.000171502650769099 -5.306342822268592e-06 1.523379147680291e-06 4.832269816252503e-06" />
+                <joint name="joint_5" pos="0 0 0" axis="-0.03869827197062155 2.932460122066175e-16 0.9992509413287974" />
+                <geom name="link_5_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.45 0.49 0.56 1" mesh="link_5" />
+                <geom name="link_5_box_proxy" size="0.046512 0.0463729 0.0620217" pos="-0.0013543 8.56639e-12 0.0327698" type="box" rgba="0.45 0.49 0.56 1" contype="0" conaffinity="0" group="3" />
+                <body name="link_6" pos="-0.01147370308941253 -0.008015481000974552 0.05859988226727852">
+                  <inertial pos="-0.04253609579803067 -0.03713614441019327 -0.001809159914232829" mass="0.5045355836391712" fullinertia="0.0009038505178734952 0.000944517995101808 0.0005392727620489267 -9.892727514445623e-05 0.0001352846089518241 -0.0001361270691774217" />
+                  <joint name="joint_6" pos="0 0 0" axis="-0.7533200855035461 -0.6570066394243989 -0.02917403861634697" />
+                  <geom name="link_6_visual" type="mesh" contype="0" conaffinity="0" group="0" density="0" rgba="0.3 0.34 0.4 1" mesh="link_6" />
+                  <geom name="link_6_box_proxy" size="0.0595985 0.0546937 0.0984985" pos="-0.0420869 -0.0415167 -0.00176899" type="box" rgba="0.3 0.34 0.4 1" contype="0" conaffinity="0" group="3" />
+                  <body name="tool_mount" quat="0.6676477599043013 0.6063602762902995 -0.3832939272220799 -0.199146803606272">
+                    <body name="tcp" pos="0 0 0.086526865671642" quat="0.7071067811865475 0 0 0.7071067811865475">
+                      <site name="tcp" size="0.006" rgba="0.2 0.9 0.15 1" />
+                    </body>
+                    <site name="tool_site" size="0.006" rgba="0.95 0.2 0.15 1" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <light pos="0.5 -0.5 1.5" dir="-0.4 0.4 -1" diffuse="0.5 0.5 0.5" />
+    <geom name="floor" type="plane" size="1 1 0.05" pos="0 0 -0.027" rgba="0.87 0.9 0.94 1" contype="0" conaffinity="0" />
+  </worldbody>
+  <option timestep="0.001" gravity="0 0 -9.81" integrator="implicitfast" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+    <headlight diffuse="0.8 0.8 0.8" ambient="0.35 0.35 0.35" specular="0.2 0.2 0.2" />
+  </visual>
+  <actuator>
+    <motor name="torque_1" joint="joint_1" gear="1" ctrllimited="false" forcelimited="false" />
+    <motor name="torque_2" joint="joint_2" gear="1" ctrllimited="false" forcelimited="false" />
+    <motor name="torque_3" joint="joint_3" gear="1" ctrllimited="false" forcelimited="false" />
+    <motor name="torque_4" joint="joint_4" gear="1" ctrllimited="false" forcelimited="false" />
+    <motor name="torque_5" joint="joint_5" gear="1" ctrllimited="false" forcelimited="false" />
+    <motor name="torque_6" joint="joint_6" gear="1" ctrllimited="false" forcelimited="false" />
+  </actuator>
+  <!--No hardware torque/velocity/position limits, damping, friction or rotor inertia identified. Contacts disabled.-->
+</mujoco>

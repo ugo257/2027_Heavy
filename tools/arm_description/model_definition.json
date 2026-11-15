@@ -1,0 +1,301 @@
+{
+  "revision": "v0.2",
+  "source_sha256": "332348cd9288b664edb56a6e83cf98533c90a5bd00c685372a520553c4f42ea7",
+  "tcp": {
+    "definition": "area centroid midpoint of opposed T-shaped primary grasp faces; physical calibration pending",
+    "T_tool_mount_tcp": [
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0.086526865671642
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "floor_z_m": -0.027,
+  "body_overrides": {
+    "27重装-j1-大臂法兰轴外压板-11.3.SLDASM-1": {
+      "link": 0,
+      "previous_link": 1,
+      "evidence": [
+        "SW fully constrained",
+        "同心23"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-铝柱-m3x90-11.3.SLDASM-1": {
+      "link": 0,
+      "previous_link": 1,
+      "evidence": [
+        "同心221",
+        "同心222"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-铝柱-m3x90-11.3.SLDASM-2": {
+      "link": 0,
+      "previous_link": 1,
+      "evidence": [
+        "同心221",
+        "同心222"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j1-大臂限位1-11.3.SLDASM-1": {
+      "link": 1,
+      "previous_link": 0,
+      "evidence": [
+        "同心264",
+        "同心265"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j1-大臂限位2-11.3.SLDASM-1": {
+      "link": 1,
+      "previous_link": 0,
+      "evidence": [
+        "重合196",
+        "平行14",
+        "宽度6"
+      ],
+      "scope": "adjustment slide locked at saved setting"
+    },
+    "27重装-j2-输出轴垫件-11.3.SLDASM-1": {
+      "link": 2,
+      "previous_link": 1,
+      "evidence": [
+        "同心55",
+        "同心56"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j2-肘部轴承外压板-11.3.SLDASM-1": {
+      "link": 1,
+      "previous_link": 2,
+      "evidence": [
+        "同心60"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-铝柱-m3x65-11.3.SLDASM-1": {
+      "link": 1,
+      "previous_link": 2,
+      "evidence": [
+        "同心61",
+        "同心62",
+        "同心63",
+        "同心64"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-铝柱-m3x65-11.3.SLDASM-2": {
+      "link": 1,
+      "previous_link": 2,
+      "evidence": [
+        "同心61",
+        "同心62",
+        "同心63",
+        "同心64"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-铝柱-m3x65-11.3.SLDASM-3": {
+      "link": 1,
+      "previous_link": 2,
+      "evidence": [
+        "同心61",
+        "同心62",
+        "同心63",
+        "同心64"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-铝柱-m3x65-11.3.SLDASM-4": {
+      "link": 1,
+      "previous_link": 2,
+      "evidence": [
+        "同心61",
+        "同心62",
+        "同心63",
+        "同心64"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "61809-2rs1.step-2": {
+      "link": 1,
+      "previous_link": 2,
+      "evidence": [
+        "同心209",
+        "同心210"
+      ],
+      "scope": "bearing lumped on shoulder support; inner spin excluded"
+    },
+    "s6709-2rs-xGmejs.step-1": {
+      "link": 1,
+      "previous_link": 2,
+      "evidence": [
+        "同心46",
+        "同心47"
+      ],
+      "scope": "bearing lumped upstream; rolling elements excluded"
+    },
+    "27重装-j3-法兰输出轴-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 2,
+      "evidence": [
+        "平行1",
+        "平行3"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j3-两头铣扁轴-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 2,
+      "evidence": [
+        "平行1",
+        "平行2",
+        "平行3"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j3-肘部轴承内压板-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 2,
+      "evidence": [
+        "平行2",
+        "重合70"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j6-法兰轴承外压板-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 4,
+      "evidence": [
+        "同心135",
+        "同心142"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j6-法兰轴承外压板2-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 4,
+      "evidence": [
+        "同心135",
+        "同心142"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j6-同步涨紧轮-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 4,
+      "evidence": [
+        "同心148",
+        "重合105",
+        "相切6",
+        "相切7",
+        "LimitDistance1"
+      ],
+      "scope": "belt tension adjustment locked; pulley internal spin excluded"
+    },
+    "27重装-j6-同步带压紧1-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 4,
+      "evidence": [
+        "同心148",
+        "重合105",
+        "相切6",
+        "相切7",
+        "LimitDistance1"
+      ],
+      "scope": "belt tension adjustment locked; pulley internal spin excluded"
+    },
+    "27重装-j6-同步带压紧2-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 4,
+      "evidence": [
+        "同心148",
+        "重合105",
+        "相切6",
+        "相切7",
+        "LimitDistance1"
+      ],
+      "scope": "belt tension adjustment locked; pulley internal spin excluded"
+    },
+    "27重装-j6-同步带压紧3-11.3.SLDASM-1": {
+      "link": 3,
+      "previous_link": 4,
+      "evidence": [
+        "同心148",
+        "重合105",
+        "相切6",
+        "相切7",
+        "LimitDistance1"
+      ],
+      "scope": "belt tension adjustment locked; pulley internal spin excluded"
+    },
+    "27重装-j6-轴承外压紧-11.3.SLDASM-1": {
+      "link": 5,
+      "previous_link": 6,
+      "evidence": [
+        "同心189",
+        "同心190",
+        "同心191"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-铝柱-m3x30-11.3.SLDASM-1": {
+      "link": 5,
+      "previous_link": 6,
+      "evidence": [
+        "重合186",
+        "同心247"
+      ],
+      "scope": "rigid support assignment"
+    },
+    "27重装-j6-j6限位块1-11.3.SLDASM-1": {
+      "link": 6,
+      "previous_link": 5,
+      "evidence": [
+        "同心186",
+        "同心187",
+        "同心193",
+        "同心194"
+      ],
+      "scope": "inner bearing collar follows q6 output; this stop block is bolted to that moving collar"
+    }
+  },
+  "mate_exclusions": {
+    "平行4": "Saved-pose alignment between elbow side and forearm; would lock intended q3 roll. Requires mechanism confirmation; not enforced in six-axis model.",
+    "平行13": "Saved-pose alignment between forearm and q4 motor support; would lock intended q4 pitch. Requires mechanism confirmation; not enforced in six-axis model.",
+    "同心93": "Slip-ring rotor-to-holder interface. Whole imported slip ring is lumped upstream; internal rotor is not separated."
+  },
+  "transmission_notes": [
+    {
+      "mate": "齿轮配合1",
+      "ratio_numerator": 0.075,
+      "ratio_denominator": 0.075,
+      "reverse_in_SW": true,
+      "status": "geometric coupling captured; external motor A mapping still requires hardware confirmation",
+      "approximation": "shoulder remote pulley mass remains on shoulder carrier; pulley spin and reflected inertia omitted"
+    }
+  ],
+  "hardware_calibrated": false
+}

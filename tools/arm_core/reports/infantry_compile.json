@@ -1,0 +1,9 @@
+{
+  "real_Heavy_headers": true,
+  "firmware_path": "D:\\2027_Heavy\\2027_Heavy",
+  "mcu_flags": "Cortex-M4 single-precision hard-float",
+  "adapter_and_driver_overlay_compiled": true,
+  "original_project_modified": false,
+  "complete_firmware_linked": false,
+  "hardware_tested": false
+}

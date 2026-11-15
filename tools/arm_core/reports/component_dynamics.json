@@ -1,0 +1,24 @@
+{
+  "component_states": 100,
+  "per_component_vs_C_mass_max_error": 1.8152811398497448e-07,
+  "per_component_vs_C_gravity_max_error": 2.0205480630863804e-06,
+  "proxy_collision_states": 2048,
+  "collision_mismatches": [
+    {
+      "q": [
+        0.12942654322382996,
+        0.02903039882183389,
+        1.9035837090351677,
+        1.1703631134919807,
+        -0.7156613316844946,
+        1.966538401071717
+      ],
+      "C": 5,
+      "MuJoCo": false
+    }
+  ],
+  "C_missed_MuJoCo_contacts": [],
+  "passed": true,
+  "exact_collision_agreement": false,
+  "note": "Any conservative C/MuJoCo disagreement is retained; this test passes only if C missed no sampled MJ contacts."
+}

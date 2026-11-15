@@ -1,0 +1,272 @@
+--- a/modules/motor/DMmotor/DMmotor.h
++++ b/modules/motor/DMmotor/DMmotor.h
+@@ -8,7 +8,7 @@
+ #include "daemon.h"
+ 
+ #define MIT_mode 0x000
+-#define DM_MOTOR_MX_CNT 4 // 最多允许4个DM电机使用多电机指令,挂载在一条总线上
++#define DM_MOTOR_MX_CNT 8 // 最多允许4个DM电机使用多电机指令,挂载在一条总线上
+ 
+ #define Infantry_PMAX 3.141593f
+ #define Infantry_VMAX 30.0f
+@@ -65,6 +65,11 @@
+     float dt;               // 两次反馈间隔
+     uint8_t online;         // 最近一次反馈是否处于正常控制状态
+     uint8_t protocol_disable; // 协议失能锁存: 持续发送 FF..FD, 防止自动重使能
++    uint8_t feedback_valid, unwrap_initialized, fault_latched, enable_requested;
++    uint32_t last_rx_us, last_command_us, last_send_us;
++    uint32_t send_period_us, command_timeout_us;
++    float feedback_wrap_period; /* 0=no unwrap; must be explicitly configured */
++
+ } DMMotorInstance;
+ 
+ // 电机回传信息结构体
+@@ -77,6 +82,7 @@
+  */
+ DMMotorInstance *DMMotorInit(Motor_Init_Config_s *config);
+ void DMMotorControl();
++uint8_t DMMotorResetFault(DMMotorInstance *motor);
+ // Deprecated compatibility API: direct torque alias, not a PID reference.
+ void DMMotorSetRef(DMMotorInstance *motor, float ref);
+ void DMMotorEnableMode(DMMotorInstance *motor);
+--- a/modules/motor/DMmotor/DMmotor.c
++++ b/modules/motor/DMmotor/DMmotor.c
+@@ -4,6 +4,7 @@
+ #include "general_def.h"
+ #include "daemon.h"
+ #include "bsp_dwt.h"
++#include <math.h>
+ 
+ #define DM_DEFAULT_P_MAX 12.5f
+ #define DM_DEFAULT_V_MAX 30.0f
+@@ -107,6 +108,7 @@
+ static void DMMotorDecode(CANInstance *_instance)
+ {
+     DMMotorInstance *motor  = (DMMotorInstance *)_instance->id; // 通过caninstance保存的father id获取对应的motorinstance
++    if (_instance->rx_len != 8) return;
+     motor_fbpara_t *measure = &motor->measure;
+     uint8_t *rx_buff        = _instance->rx_buff;
+ 
+@@ -127,12 +129,24 @@
+     measure->tor   = uint_to_float(measure->t_int, -motor->motor_settings.control_range.T_max, motor->motor_settings.control_range.T_max, 12); // (-18.0,18.0)
+     measure->Tmos  = (float)(rx_buff[6]);
+     measure->Tcoil = (float)(rx_buff[7]);
++    uint8_t was_running = motor->online;
+     motor->online  = (measure->state == 1) ? 1 : 0;
+ 
+-    // DM 协议回传的是单圈位置，这里补偿跨越正负边界时的累计圈数。
+-    if (measure->pos - measure->last_pos > (motor->motor_settings.control_range.P_max / 2)) measure->total_round--;
+-    if (measure->pos - measure->last_pos < -(motor->motor_settings.control_range.P_max / 2)) measure->total_round++;
+-    measure->total_pos = measure->pos + measure->total_round * 2 * motor->motor_settings.control_range.P_max;
++    motor->last_rx_us = (uint32_t)DWT_GetTimeline_us();
++    motor->feedback_valid = 1u;
++    if (!motor->unwrap_initialized) {
++        measure->total_pos = measure->pos;
++        motor->unwrap_initialized = 1u;
++    } else {
++        float delta = measure->pos - measure->last_pos;
++        if (motor->feedback_wrap_period > 0.0f)
++            delta -= motor->feedback_wrap_period * roundf(delta / motor->feedback_wrap_period);
++        measure->total_pos += delta;
++    }
++    if (measure->state > 1 || (was_running && motor->enable_requested && measure->state != 1)) {
++        motor->fault_latched = 1u;
++        DMMotorDisable1(motor);
++    }
+ 
+     DMMotorErrorDetection(motor);
+ }
+@@ -140,23 +154,16 @@
+ void DMMotorLostCallback(void *motor_ptr)
+ {
+     DMMotorInstance *motor = (DMMotorInstance *)motor_ptr;
+-    motor->online          = 0;
+-    motor->ctrl.pos_set = 0.0f;
+-    motor->ctrl.vel_set = 0.0f;
+-    motor->ctrl.tor_set = 0.0f;
+-    motor->ctrl.kp_set  = 0.0f;
+-    motor->ctrl.kd_set  = 0.0f;
+-    // DMMotorControl(motor); // 立即下发清零控制量，停止电机动作
+-    // 掉线后持续发送使能帧，等待电机重新进入可控状态。
+-    DMMotorEnableMode(motor);
+-    CANTransmit(motor->motor_can_instance, 2);
+-
+-    //LOGWARNING("[DMMotor] motor lost, id: %d", (motor->motor_can_instance->tx_id & (0x1f<<5)) >> 5);
++    motor->online = 0u;
++    motor->fault_latched = 1u;
++    DMMotorDisable1(motor);
+ }
+ 
+ DMMotorInstance *DMMotorInit(Motor_Init_Config_s *config)
+ {
++    if (config == NULL || idm >= DM_MOTOR_MX_CNT) return NULL;
+     DMMotorInstance *motor = (DMMotorInstance *)malloc(sizeof(DMMotorInstance));
++    if (motor == NULL) return NULL;
+     // motor = (DRMotorInstance *)malloc(sizeof(DRMotorInstance));
+     memset(motor, 0, sizeof(DMMotorInstance));
+     // motor basic setting 电机基本设置
+@@ -176,8 +183,9 @@
+     motor->motor_can_instance = CANRegister(&config->can_init_config);
+     motor->online             = 0;
+ 
+-    DMMotorEnableMode(motor); // 使能电机模式,发送使能指令
+-    CANTransmit(motor->motor_can_instance, 2);
++    motor->protocol_disable = 1u;
++    motor->send_period_us = 2000u;
++    motor->command_timeout_us = 10000u;
+     motor->ctrl.vel_set = 0;
+     motor->ctrl.tor_set = 0; //   默认关闭，避免出问题
+ 
+@@ -186,7 +194,7 @@
+     Daemon_Init_Config_s daemon_config = {
+         .callback     = DMMotorLostCallback,
+         .owner_id     = motor,
+-        .reload_count = 4, // 4ms
++        .reload_count = 20, // 20ms; application uses its own 10ms feedback age limit
+     };
+     motor->daemon = DaemonRegister(&daemon_config);
+     motor->stop_flag = MOTOR_STOP;
+@@ -233,63 +241,47 @@
+  *          ctrl.pos_set/ctrl.vel_set；本函数只处理在线检测、停机清零、
+  *          报文组包和 CAN 发送。
+  */
+-uint16_t cnt[2] ;
+-void DMMotorControl()
+-{
+-    DMMotorInstance *motor;
+-    for (size_t i = 0; i < idm; ++i) {
+-        motor = dmmotor_instance[i];
+-        cnt[i]= (cnt[i] + 1) % 500; // 每500次控制周期发送一次失能帧（如果处于失能状态）
+-        if(cnt[i] == 0){
++void DMMotorControl(void)
++{
++    uint32_t now = (uint32_t)DWT_GetTimeline_us();
++    for (size_t i=0; i<idm; ++i) {
++        DMMotorInstance *motor = dmmotor_instance[i];
++        if ((uint32_t)(now-motor->last_send_us) < motor->send_period_us) continue;
++        motor->last_send_us = now;
++        if (motor->enable_requested &&
++            (uint32_t)(now-motor->last_command_us) > motor->command_timeout_us) {
++            motor->fault_latched = 1u;
++            DMMotorDisable1(motor);
++        }
++        if (motor->protocol_disable || motor->fault_latched || !motor->enable_requested) {
++            DMMotorDisableMode(motor);
++        } else if (!motor->online || motor->measure.state != 1) {
++            /* Explicit enable request only; errors never silently re-enable. */
+             DMMotorEnableMode(motor);
+-            CANTransmit(motor->motor_can_instance, 2);
+-            continue;
++        } else {
++            if (motor->stop_flag == MOTOR_STOP) {
++                motor->ctrl.pos_set=0; motor->ctrl.vel_set=0; motor->ctrl.tor_set=0;
++                motor->ctrl.kp_set=0; motor->ctrl.kd_set=0;
++            }
++            if (!isfinite(motor->ctrl.tor_set) || !isfinite(motor->ctrl.pos_set) ||
++                !isfinite(motor->ctrl.vel_set) || !isfinite(motor->ctrl.kp_set) || !isfinite(motor->ctrl.kd_set)) {
++                motor->fault_latched=1u; DMMotorDisable1(motor); DMMotorDisableMode(motor);
++            } else if (motor->ctrl.mode == ANGLE_LOOP_CONTRO) pos_ctrl(motor);
++            else mit_ctrl(motor);
+         }
+-        /*
+-         * protocol_disable 是真正的 DM 协议失能状态，需要持续发送 FF..FD。
+-         * 这里放在自动重使能之前，避免失能期间被离线/非 state=1 分支重新拉起。
+-         */
+-        // if (motor->protocol_disable != 0u) {
+-        //     DMMotorDisableMode(motor);
+-        //     CANTransmit(motor->motor_can_instance, 2);
+-        //     continue;
+-        // }
+-
+-        // 电机未进入正常控制状态前不要下发闭环输出，优先尝试重新使能。
+-        if (!motor->online || motor->measure.state != 1) {
+-            DMMotorEnableMode(motor);
+-            CANTransmit(motor->motor_can_instance, 2);
+-            continue;
++        /* Zero blocking budget; app must inspect failed transmission latch. */
++        if (!CANTransmit(motor->motor_can_instance,0)) {
++            motor->fault_latched=1u; DMMotorDisable1(motor);
+         }
+-
+-        // 停止时保留通信，但控制量清零，避免重新使能瞬间出现残留输出。
+-        if (motor->stop_flag == MOTOR_STOP) {
+-            motor->ctrl.pos_set = 0;
+-            motor->ctrl.vel_set = 0;
+-            motor->ctrl.tor_set = 0;
+-            motor->ctrl.kp_set  = 0;
+-            motor->ctrl.kd_set  = 0;
+-        }
+-
+-        switch (motor->ctrl.mode) {
+-        case TORQUE_LOOP_CONTRO:
+-            DMMotorEnsureProtocolRange(motor);
+-            motor->ctrl.pos_set = DMMotorLimit(motor->ctrl.pos_set, DMMotorAbs(motor->motor_settings.control_range.P_max));
+-            motor->ctrl.vel_set = DMMotorLimit(motor->ctrl.vel_set, DMMotorAbs(motor->motor_settings.control_range.V_max));
+-            motor->ctrl.tor_set = DMMotorLimit(motor->ctrl.tor_set, DMMotorAbs(motor->motor_settings.control_range.T_max));
+-            motor->ctrl.kp_set  = DMMotorClampRange(motor->ctrl.kp_set, KP_MIN, KP_MAX);
+-            motor->ctrl.kd_set  = DMMotorClampRange(motor->ctrl.kd_set, KD_MIN, KD_MAX);
+-            mit_ctrl(motor);
+-            break;
+-        case ANGLE_LOOP_CONTRO:
+-            pos_ctrl(motor);
+-            break;
+-        default:
+-            mit_ctrl(motor);
+-            break;
+-        }
+-        CANTransmit(motor->motor_can_instance, 2);
+-    }
++    }
++}
++
++uint8_t DMMotorResetFault(DMMotorInstance *motor)
++{
++    if (!motor || !motor->feedback_valid || motor->measure.state > 1 ||
++        (uint32_t)((uint32_t)DWT_GetTimeline_us()-motor->last_rx_us) > 10000u) return 0u;
++    motor->fault_latched=0u;
++    return 1u;
+ }
+ 
+ /**
+@@ -375,6 +367,7 @@
+ // 异常检测
+ void DMMotorErrorDetection(DMMotorInstance *motor)
+ {
++    (void)motor;
+ }
+ 
+ // DM电机软重启
+@@ -403,6 +396,8 @@
+     if (motor == NULL) {
+         return;
+     }
++    if (motor->fault_latched) return;
++    motor->enable_requested = 1u;
+     motor->protocol_disable = 0u;
+     motor->stop_flag = MOTOR_ENABLED;
+ }
+@@ -418,6 +413,7 @@
+     motor->ctrl.kp_set  = 0.0f;
+     motor->ctrl.kd_set  = 0.0f;
+     motor->protocol_disable = 1u;
++    motor->enable_requested = 0u;
+     motor->stop_flag = MOTOR_STOP;
+ }
+ 
+@@ -426,6 +422,8 @@
+     if (motor == NULL) {
+         return;
+     }
++    if (!isfinite(torque)) { motor->fault_latched=1u; DMMotorDisable1(motor); return; }
++    motor->last_command_us = (uint32_t)DWT_GetTimeline_us();
+     DMMotorEnsureProtocolRange(motor);
+     motor->ctrl.pos_set = 0.0f;
+     motor->ctrl.vel_set = 0.0f;
+@@ -445,6 +443,7 @@
+         return;
+     }
+     DMMotorEnsureProtocolRange(motor);
++    motor->last_command_us = (uint32_t)DWT_GetTimeline_us();
+     motor->ctrl.pos_set = DMMotorLimit(pos, DMMotorAbs(motor->motor_settings.control_range.P_max));
+     motor->ctrl.vel_set = DMMotorLimit(vel, DMMotorAbs(motor->motor_settings.control_range.V_max));
+     motor->ctrl.kp_set  = DMMotorClampRange(kp, KP_MIN, KP_MAX);

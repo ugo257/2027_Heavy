@@ -1,0 +1,141 @@
+﻿component,rigid_link,mass_kg,assignment,mass_source
+27重装-j0-底座-11.3.SLDASM-1,0,0.08915745095397672,fixed base/fixture,SolidWorks read-only current component mass properties
+DM 6248 减速电机20250717_1.stp-1,0,0.66,shoulder motor housing lumped on base,SolidWorks read-only current component mass properties
+27重装-j0-电机安装板-11.3.SLDASM-1,0,0.05124730941281785,fixed base/fixture,SolidWorks read-only current component mass properties
+27重装-j1-大臂碳方-11.3.SLDASM-1,1,0.1039473843402681,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂内嵌碳板1-11.3.SLDASM-1,1,0.00999105955919448,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j0-侧板-11.3.SLDASM-1,0,0.06562130357798665,fixed base/fixture,SolidWorks read-only current component mass properties
+27重装-j1-大臂输出轴垫片-11.3.SLDASM-1,1,0.0010151456615878575,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂过线法兰轴-11.3.SLDASM-1,1,0.061418832079517184,upper arm structure,SolidWorks read-only current component mass properties
+61809-2rs1.step-1,0,0.005676283370861084,bearing lumped to one side,SolidWorks read-only current component mass properties
+27重装-j1-大臂内嵌碳板2-11.3.SLDASM-1,1,0.010718916189266675,upper arm structure,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-1,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-2,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-3,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-4,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-j1-大臂法兰轴外压板-11.3.SLDASM-1,0,0.01670560177615614,"SW mate evidence: SW fully constrained, 同心23; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-j1-大臂外垫碳板-11.3.SLDASM-1,1,0.013562485257735669,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂外垫碳板-11.3.SLDASM-2,1,0.013562485257735669,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂内嵌碳板3-11.3.SLDASM-1,1,0.0075902376384902725,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂内嵌碳板3-11.3.SLDASM-2,1,0.0075902376384902725,upper arm structure,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-5,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-6,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-7,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m4x45-11.3.SLDASM-8,1,0.0019085175370558004,upper-arm spacer,SolidWorks read-only current component mass properties
+27重装-j1-大臂外延碳板1-11.3.SLDASM-1,1,0.036168130114929045,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂外延碳板2-11.3.SLDASM-1,1,0.05933609028564237,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j2-肘部侧板1-11.3.SLDASM-1,2,0.06414154629914079,elbow structure,SolidWorks read-only current component mass properties
+27重装-j2-输出轴垫件-11.3.SLDASM-1,2,0.007176018251442862,"SW mate evidence: 同心55, 同心56; rigid support assignment",SolidWorks read-only current component mass properties
+s6709-2rs-xGmejs.step-1,1,0.003510184936112513,"SW mate evidence: 同心46, 同心47; bearing lumped upstream; rolling elements excluded",SolidWorks read-only current component mass properties
+27重装-j2-肘部轴承外压板-11.3.SLDASM-1,1,0.018988188750474914,SW mate evidence: 同心60; rigid support assignment,SolidWorks read-only current component mass properties
+27重装-j2-法兰轴-11.3.SLDASM-1,2,0.010037233019383033,elbow structure,SolidWorks read-only current component mass properties
+27重装-j2-法兰轴内压紧-11.3.SLDASM-1,2,0.008285184232315227,elbow structure,SolidWorks read-only current component mass properties
+27重装-j2-肘部侧板2-11.3.SLDASM-1,2,0.13420976635715787,elbow structure,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x65-11.3.SLDASM-1,1,0.0022053980428200348,"SW mate evidence: 同心61, 同心62, 同心63, 同心64; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-铝柱-m3x65-11.3.SLDASM-2,1,0.0022053980428200348,"SW mate evidence: 同心61, 同心62, 同心63, 同心64; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-铝柱-m3x65-11.3.SLDASM-3,1,0.0022053980428200348,"SW mate evidence: 同心61, 同心62, 同心63, 同心64; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-铝柱-m3x65-11.3.SLDASM-4,1,0.0022053980428200348,"SW mate evidence: 同心61, 同心62, 同心63, 同心64; rigid support assignment",SolidWorks read-only current component mass properties
+DM-J4310-2EC-V1.1_3d_20260228_1.stp-1,2,0.306,actuator housing on upstream link,SolidWorks read-only current component mass properties
+27重装-j2-肘部轴承安装件-11.3.SLDASM-1,2,0.04305595970456405,elbow structure,SolidWorks read-only current component mass properties
+27重装-j2-肘部电机安装件-11.3.SLDASM-1,2,0.03410665652276298,elbow structure,SolidWorks read-only current component mass properties
+27重装-j2-肘部电机屁股板-11.3.SLDASM-1,2,0.009889935240386394,elbow structure,SolidWorks read-only current component mass properties
+6x6x40-1,2,0.003429955791106607,transmission key lumped to support,SolidWorks read-only current component mass properties
+6x6x40-2,2,0.003429955791106607,transmission key lumped to support,SolidWorks read-only current component mass properties
+CRBT305A-交叉滚子轴承-1,2,0.008280845535781001,elbow roll support accessory,SolidWorks read-only current component mass properties
+MT1233-S06.step-1,2,0.021912970406604365,elbow roll support accessory,SolidWorks read-only current component mass properties
+27重装-j3-肘部轴承外压板-11.3.SLDASM-1,2,0.011035824529721702,forearm roll support side,SolidWorks read-only current component mass properties
+27重装-j3-法兰输出轴-11.3.SLDASM-1,3,0.008400826980599851,"SW mate evidence: 平行1, 平行3; rigid support assignment",SolidWorks read-only current component mass properties
+dm_4340__3d20240822_1(2)(1).stp-1,1,0.11456143317981561,elbow actuator housing follows upper arm,SolidWorks read-only current component mass properties
+27重装-j3-两头铣扁轴-11.3.SLDASM-1,3,0.03122019403428,"SW mate evidence: 平行1, 平行2, 平行3; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-j3-肘部轴承内压板-11.3.SLDASM-1,3,0.008422094668419164,"SW mate evidence: 平行2, 重合70; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-j3-小臂法兰连接轴-11.3.SLDASM-1,3,0.015263821339939886,forearm rotating side,SolidWorks read-only current component mass properties
+27重装-j3-滑环转子固定-11.3.SLDASM-1,3,0.002764730825539867,forearm rotating side,SolidWorks read-only current component mass properties
+27重装-j3-滑环定子固定-11.3.SLDASM-1,2,0.0027018271144904223,forearm roll support side,SolidWorks read-only current component mass properties
+27重装-j3-滑环定子固定-11.3.SLDASM-2,2,0.0027018271144904223,forearm roll support side,SolidWorks read-only current component mass properties
+27重装-j4-小臂碳方-11.3.SLDASM-1,3,0.04408318510912436,forearm structure,SolidWorks read-only current component mass properties
+27重装-j4-小臂内嵌连接件-11.3.SLDASM-1,3,0.05950779232372581,forearm structure,SolidWorks read-only current component mass properties
+DM-J4310-2EC-V1.1_3d_20260228_1.stp-2,3,0.306,actuator housing on upstream link,SolidWorks read-only current component mass properties
+27重装-j5-电机安装板-11.3.SLDASM-1,3,0.041309065351399964,forearm structure,SolidWorks read-only current component mass properties
+dm_6220_3d_20241220_1.stp-1,4,0.494,wrist actuator housing upstream of q5,SolidWorks read-only current component mass properties
+27重装-j5-轴系安装板-11.3.SLDASM-1,3,0.10477111070272407,forearm structure,SolidWorks read-only current component mass properties
+27重装-j5-轴系安装垫高板2-11.3.SLDASM-1,3,0.012736830447766958,forearm structure,SolidWorks read-only current component mass properties
+27重装-j6-电机屁股罩-11.3.SLDASM-1,4,0.10301756221415857,q4 output and wrist support,SolidWorks read-only current component mass properties
+f6807zz.step-1,3,0.004554368630841098,wrist bearing lumped upstream,SolidWorks read-only current component mass properties
+27重装-j6-法兰轴承外压板-11.3.SLDASM-1,3,0.015118825900661994,"SW mate evidence: 同心135, 同心142; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-j6-法兰轴1-11.3.SLDASM-1,4,0.023804366684435866,q4 output and wrist support,SolidWorks read-only current component mass properties
+27重装-j6-法兰轴承内压板-11.3.SLDASM-1,4,0.01869802735966475,q4 output and wrist support,SolidWorks read-only current component mass properties
+27重装-j6-同步轮1-11.3.SLDASM-1,3,0.011277794456112492,belt driver mounted on forearm,SolidWorks read-only current component mass properties
+27重装-j6-同步轮2-11.3.SLDASM-1,4,0.015061981822836619,q4 output and wrist support,SolidWorks read-only current component mass properties
+27重装-j6-法兰输出轴-11.3.SLDASM-1,3,0.016213238180796428,belt driver mounted on forearm,SolidWorks read-only current component mass properties
+27重装-j5-轴系安装垫高板-11.3.SLDASM-3,3,0.011858428347920951,forearm structure,SolidWorks read-only current component mass properties
+27重装-j5-走线安装板-11.3.SLDASM-1,3,0.11098917480216625,forearm structure,SolidWorks read-only current component mass properties
+27重装-j6-法兰轴承外压板2-11.3.SLDASM-1,3,0.009228700167684551,"SW mate evidence: 同心135, 同心142; rigid support assignment",SolidWorks read-only current component mass properties
+f6807zz.step-2,3,0.004554368630841098,wrist bearing lumped upstream,SolidWorks read-only current component mass properties
+27重装-j6-法兰轴承内压板2-11.3.SLDASM-1,4,0.004672204288188156,q4 output and wrist support,SolidWorks read-only current component mass properties
+27重装-j6-法兰轴2-11.3.SLDASM-1,4,0.018172639837716817,q4 output and wrist support,SolidWorks read-only current component mass properties
+27重装-j6-同步涨紧轮-11.3.SLDASM-1,3,0.0031967668745684647,"SW mate evidence: 同心148, 重合105, 相切6, 相切7, LimitDistance1; belt tension adjustment locked; pulley internal spin excluded",SolidWorks read-only current component mass properties
+27重装-j6-同步带压紧1-11.3.SLDASM-1,3,0.010547281964958702,"SW mate evidence: 同心148, 重合105, 相切6, 相切7, LimitDistance1; belt tension adjustment locked; pulley internal spin excluded",SolidWorks read-only current component mass properties
+27重装-j6-同步带压紧2-11.3.SLDASM-1,3,0.005665567280120542,"SW mate evidence: 同心148, 重合105, 相切6, 相切7, LimitDistance1; belt tension adjustment locked; pulley internal spin excluded",SolidWorks read-only current component mass properties
+27重装-j6-同步带压紧3-11.3.SLDASM-1,3,0.003967415874315448,"SW mate evidence: 同心148, 重合105, 相切6, 相切7, LimitDistance1; belt tension adjustment locked; pulley internal spin excluded",SolidWorks read-only current component mass properties
+27重装-铝柱-m3x80-11.3.SLDASM-1,3,0.0027143360527015817,forearm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x80-11.3.SLDASM-2,3,0.0027143360527015817,forearm spacer,SolidWorks read-only current component mass properties
+27重装-打印柱-3x13.5-11.3.SLDASM-1,3,0.00027156296034766986,forearm spacer,SolidWorks read-only current component mass properties
+27重装-打印柱-3x13.5-11.3.SLDASM-2,3,0.00027156296034766986,forearm spacer,SolidWorks read-only current component mass properties
+27重装-j5-小臂内嵌碳板-11.3.SLDASM-1,3,0.004476560874693479,forearm structure,SolidWorks read-only current component mass properties
+27重装-j5-小臂内嵌碳板-11.3.SLDASM-2,3,0.004476560874693479,forearm structure,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x55-11.3.SLDASM-1,3,0.0018661060362323374,forearm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x55-11.3.SLDASM-2,3,0.0018661060362323374,forearm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x55-11.3.SLDASM-3,3,0.0018661060362323374,forearm spacer,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x55-11.3.SLDASM-4,3,0.0018661060362323374,forearm spacer,SolidWorks read-only current component mass properties
+27重装-j6-输出板-11.3.SLDASM-1,5,0.02362734801171327,q5 moving bracket,SolidWorks read-only current component mass properties
+27重装-j6-承重-11.3.SLDASM-1,5,0.018162323015951172,q5 moving bracket,SolidWorks read-only current component mass properties
+27重装-j6-轴承外圈安装-11.3.SLDASM-1,5,0.02757820721420573,q5 moving bracket,SolidWorks read-only current component mass properties
+27重装-dm_3507-11.3.SLDASM-1,5,0.162,q6 housing or locked gripper actuator,SolidWorks read-only current component mass properties
+27重装-j6-j6限位块2-11.3.SLDASM-1,5,0.0085319735186446,q5 moving bracket,SolidWorks read-only current component mass properties
+27重装-j6-j6限位块1-11.3.SLDASM-1,6,0.004435626048872173,"SW mate evidence: 同心186, 同心187, 同心193, 同心194; inner bearing collar follows q6 output; this stop block is bolted to that moving collar",SolidWorks read-only current component mass properties
+27重装-j6-安装轴-11.3.SLDASM-1,6,0.009437070060534123,q6 output side,SolidWorks read-only current component mass properties
+27重装-j7-安装轴-11.3.SLDASM-1,6,0.04170652305125475,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-轴承内圈压紧-11.3.SLDASM-1,6,0.022964525283156855,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j6-轴承外压紧-11.3.SLDASM-1,5,0.012538196811441759,"SW mate evidence: 同心189, 同心190, 同心191; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-轴承46x58x5-11.3.SLDASM-1,5,0.025,q6 support bearing,SolidWorks read-only current component mass properties
+6x6x40-4,5,0.003429955791106607,transmission key lumped to support,SolidWorks read-only current component mass properties
+6x6x40-5,5,0.003429955791106607,transmission key lumped to support,SolidWorks read-only current component mass properties
+27重装-dm_3507-11.3.SLDASM-2,6,0.162,q6 housing or locked gripper actuator,SolidWorks read-only current component mass properties
+27重装-j6-输出板垫高-11.3.SLDASM-1,5,0.0006965297328904953,q5 moving bracket,SolidWorks read-only current component mass properties
+27重装-j1-大臂过线法兰轴压板-11.3.SLDASM-1,1,0.009669398072741146,remote belt part stays at shoulder; internal spin not modeled,SolidWorks read-only current component mass properties
+27重装-j2-同步带轮1-11.3.SLDASM-1,1,0.10914567829860304,remote belt pulley stays at shoulder; internal spin not modeled,SolidWorks read-only current component mass properties
+61809-2rs1.step-2,1,0.005676283370861084,"SW mate evidence: 同心209, 同心210; bearing lumped on shoulder support; inner spin excluded",SolidWorks read-only current component mass properties
+27重装-j1-大臂过线法兰轴压板2-11.3.SLDASM-1,1,0.018359692719772017,remote belt part stays at shoulder; internal spin not modeled,SolidWorks read-only current component mass properties
+27重装-j1-大臂过线法兰轴压板-11.3.SLDASM-3,1,0.009669398072741146,remote belt part stays at shoulder; internal spin not modeled,SolidWorks read-only current component mass properties
+27重装-j2-同步带轮1压板-11.3.SLDASM-1,1,0.013540939493438067,remote belt pulley stays at shoulder; internal spin not modeled,SolidWorks read-only current component mass properties
+27重装-j2-同步带轮2-11.3.SLDASM-1,2,0.0409009839041505,elbow structure,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x90-11.3.SLDASM-1,0,0.005152997350050659,"SW mate evidence: 同心221, 同心222; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-铝柱-m3x90-11.3.SLDASM-2,0,0.005152997350050659,"SW mate evidence: 同心221, 同心222; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-j7-夹爪底板-11.3.SLDASM-1,6,0.018,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-MGN12导轨-11.3.SLDASM-1,6,0.01,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-MGN12滑块-11.3.SLDASM-1,6,0.009,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-MGN12导轨-11.3.SLDASM-2,6,0.01,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-MGN12滑块-11.3.SLDASM-2,6,0.009,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-凯元齿条L113W10M1-11.3.SLDASM-1,6,0.03168372264908142,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-导轨限位1-11.3.SLDASM-1,6,0.001142317733157852,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-导轨限位1-11.3.SLDASM-2,6,0.001142317733157852,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-凯元齿条L113W10M1-11.3.SLDASM-2,6,0.03168372264908142,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-直齿M1X38-11.3.SLDASM-1,6,0.008981755852992483,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-夹爪齿轮垫高件-11.3.SLDASM-1,6,0.010194837669102586,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-夹爪座-11.3.SLDASM-1,6,0.04643926472123187,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-导轨限位1-11.3.SLDASM-3,6,0.001142317733157852,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-导轨限位1-11.3.SLDASM-4,6,0.001142317733157852,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-夹爪座-11.3.SLDASM-2,6,0.04643926472123187,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-夹爪限制件-11.3.SLDASM-1,6,0.014,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-j7-夹爪限制件-11.3.SLDASM-2,6,0.014,gripper locked at saved opening,SolidWorks read-only current component mass properties
+27重装-铝柱-m3x30-11.3.SLDASM-1,5,0.0017176657833502197,"SW mate evidence: 重合186, 同心247; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-j1-大臂加固碳板-11.3.SLDASM-1,1,0.003927633258681662,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂加固碳板-11.3.SLDASM-2,1,0.003927633258681662,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂加固柱-11.3.SLDASM-1,1,0.0013685936846726309,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j2-肘部打印件外壳1-11.3.SLDASM-1,2,0.030131927821336873,elbow structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂限位1-11.3.SLDASM-1,1,0.005882629938994523,"SW mate evidence: 同心264, 同心265; rigid support assignment",SolidWorks read-only current component mass properties
+27重装-j1-大臂限位2-11.3.SLDASM-1,1,0.006140240054629616,"SW mate evidence: 重合196, 平行14, 宽度6; adjustment slide locked at saved setting",SolidWorks read-only current component mass properties
+27重装-j1-大臂限位3-11.3.SLDASM-1,1,0.004463679864116611,upper arm structure,SolidWorks read-only current component mass properties
+27重装-j1-大臂限位3-11.3.SLDASM-3,1,0.004463679864116611,upper arm structure,SolidWorks read-only current component mass properties
+铝型材框架-1,0,0.4268497320496814,fixed base/fixture,SolidWorks read-only current component mass properties
+调试底板-1,0,0.0761936216726368,fixed base/fixture,SolidWorks read-only current component mass properties

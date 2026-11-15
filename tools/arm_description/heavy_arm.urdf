@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="heavy_arm_6r_locked_gripper">
+  <!--CAD reference pose q=0. Continuous joints mean limits are not yet modeled. Gripper opening is locked.-->
+  <mujoco>
+    <compiler discardvisual="false" fusestatic="false" strippath="false" inertiafromgeom="false" />
+  </mujoco>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.05026913919340493 -0.02331553579858036 0.02744054558999704" rpy="0 0 0" />
+      <mass value="1.401757297514218" />
+      <inertia ixx="0.009083561109848468" iyy="0.01432118453518879" izz="0.01966326842753314" ixy="2.258642331207434e-05" ixz="-7.405091704458009e-06" iyz="-0.001156940062231409" />
+    </inertial>
+    <visual name="base_link_visual">
+      <geometry>
+        <mesh filename="meshes/base_link.stl" />
+      </geometry>
+      <material name="color_base_link">
+        <color rgba="0.25 0.29 0.34 1" />
+      </material>
+    </visual>
+    <collision name="base_link_box_proxy">
+      <origin xyz="0.04999999511986966 -0.05000000130385156 0.03570220160255282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5000000093132257 0.3200000021606684 0.1214044027580709" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_1">
+    <inertial>
+      <origin xyz="0.1290778100861728 -0.01848284953776073 0.1016105850668222" rpy="0 0 0" />
+      <mass value="0.6822860233090371" />
+      <inertia ixx="0.006930187776969333" iyy="0.01578631458629028" izz="0.01049781756825746" ixy="-0.001617580285749319" ixz="-0.007432466269458281" iyz="-0.001282090377352759" />
+    </inertial>
+    <visual name="link_1_visual">
+      <geometry>
+        <mesh filename="meshes/link_1.stl" />
+      </geometry>
+      <material name="color_link_1">
+        <color rgba="0.18 0.20 0.23 1" />
+      </material>
+    </visual>
+    <collision name="link_1_box_proxy">
+      <origin xyz="0.1349723484301451 -0.01126253146734628 0.1061474491254725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3457093428931136 0.1182316070705494 0.2872867529028859" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_2">
+    <inertial>
+      <origin xyz="-0.05671546081363378 -0.03148678860126012 0.05010277930849209" rpy="0 0 0" />
+      <mass value="0.7414284176359418" />
+      <inertia ixx="0.001422128495629224" iyy="0.001721127392200844" izz="0.001901986569189239" ixy="6.204939915690972e-05" ixz="0.000409249026201525" iyz="-6.825449127064843e-05" />
+    </inertial>
+    <visual name="link_2_visual">
+      <geometry>
+        <mesh filename="meshes/link_2.stl" />
+      </geometry>
+      <material name="color_link_2">
+        <color rgba="0.6 0.63 0.68 1" />
+      </material>
+    </visual>
+    <collision name="link_2_box_proxy">
+      <origin xyz="-0.04883317802269706 -0.03630900702147433 0.03690904541864962" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1733986519331927 0.1340819863132088 0.1488079977143257" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_3">
+    <inertial>
+      <origin xyz="-0.1543288499883488 -0.009693356019258116 -0.006198121096412147" rpy="0 0 0" />
+      <mass value="0.8640409268149232" />
+      <inertia ixx="0.001305864878577029" iyy="0.003312668756732386" izz="0.004052566281053337" ixy="-0.0001453694613032325" ixz="-0.0001179552400513531" iyz="-1.378192757519215e-05" />
+    </inertial>
+    <visual name="link_3_visual">
+      <geometry>
+        <mesh filename="meshes/link_3.stl" />
+      </geometry>
+      <material name="color_link_3">
+        <color rgba="0.24 0.27 0.31 1" />
+      </material>
+    </visual>
+    <collision name="link_3_box_proxy">
+      <origin xyz="-0.140291072340136 0.002557534144725149 -0.006088783147924158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2811545441084722 0.133315068065933 0.07255473697045632" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_4">
+    <inertial>
+      <origin xyz="-0.0006066284453253925 0.0549983824727374 0.01613518760426076" rpy="0 0 0" />
+      <mass value="0.6774267822070007" />
+      <inertia ixx="0.0006004274995465606" iyy="0.0003609681659018396" izz="0.0006633569068553224" ixy="1.831001920138833e-06" ixz="-2.045219666599147e-06" iyz="-2.90184383777617e-05" />
+    </inertial>
+    <visual name="link_4_visual">
+      <geometry>
+        <mesh filename="meshes/link_4.stl" />
+      </geometry>
+      <material name="color_link_4">
+        <color rgba="0.65 0.67 0.71 1" />
+      </material>
+    </visual>
+    <collision name="link_4_box_proxy">
+      <origin xyz="3.869828696347055e-05 0.05395000002140719 0.01156931712891299" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07661670736551536 0.1201000001471489 0.06113826915622389" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_5">
+    <inertial>
+      <origin xyz="-0.002403335827565449 -0.001090391608899918 0.0497225901280151" rpy="0 0 0" />
+      <mass value="0.2867121556704104" />
+      <inertia ixx="0.0002542924849475266" iyy="0.0002470469291252906" izz="0.000171502650769099" ixy="-5.306342822268592e-06" ixz="1.523379147680291e-06" iyz="4.832269816252503e-06" />
+    </inertial>
+    <visual name="link_5_visual">
+      <geometry>
+        <mesh filename="meshes/link_5.stl" />
+      </geometry>
+      <material name="color_link_5">
+        <color rgba="0.45 0.49 0.56 1" />
+      </material>
+    </visual>
+    <collision name="link_5_box_proxy">
+      <origin xyz="-0.001354297960749946 8.566394121833909e-12 0.03276976435676225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09302393108657236 0.09274576994054079 0.1240434594580814" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_6">
+    <inertial>
+      <origin xyz="-0.04253609579803067 -0.03713614441019327 -0.001809159914232829" rpy="0 0 0" />
+      <mass value="0.5045355836391712" />
+      <inertia ixx="0.0009038505178734952" iyy="0.000944517995101808" izz="0.0005392727620489267" ixy="-9.892727514445623e-05" ixz="0.0001352846089518241" iyz="-0.0001361270691774217" />
+    </inertial>
+    <visual name="link_6_visual">
+      <geometry>
+        <mesh filename="meshes/link_6.stl" />
+      </geometry>
+      <material name="color_link_6">
+        <color rgba="0.3 0.34 0.4 1" />
+      </material>
+    </visual>
+    <collision name="link_6_box_proxy">
+      <origin xyz="-0.04208692412187623 -0.04151667920087601 -0.001768989868088391" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1191970702587762 0.1093874963673625 0.1969970941876013" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1" type="continuous">
+    <parent link="base_link" />
+    <child link="link_1" />
+    <origin xyz="0.04999999999999999 -0.0512499999999988 0.05799999999999999" rpy="0 0 0" />
+    <axis xyz="-3.848801888565931e-16 1 4.667822005438488e-16" />
+  </joint>
+  <joint name="joint_2" type="continuous">
+    <parent link="link_1" />
+    <child link="link_2" />
+    <origin xyz="0.2711977536887711 0.03349999999999995 0.2132528508465121" rpy="0 0 0" />
+    <axis xyz="4.093384219239206e-16 1 2.699838688368046e-16" />
+  </joint>
+  <joint name="joint_3" type="continuous">
+    <parent link="link_2" />
+    <child link="link_3" />
+    <origin xyz="-0.07907594024737852 -0.03349999999999995 0.05920964600114653" rpy="0 0 0" />
+    <axis xyz="-0.9992509413287975 3.075788547810248e-17 -0.03869827197062238" />
+  </joint>
+  <joint name="joint_4" type="continuous">
+    <parent link="link_3" />
+    <child link="link_4" />
+    <origin xyz="-0.2469149076028078 -0.05799999999998679 -0.009562343003959306" rpy="0 0 0" />
+    <axis xyz="-1.880575994285889e-16 1 -3.775477792299142e-16" />
+  </joint>
+  <joint name="joint_5" type="continuous">
+    <parent link="link_4" />
+    <child link="link_5" />
+    <origin xyz="-0.00160597828677846 0.05800000000000138 0.04146891406514519" rpy="0 0 0" />
+    <axis xyz="-0.03869827197062155 2.932460122066175e-16 0.9992509413287974" />
+  </joint>
+  <joint name="joint_6" type="continuous">
+    <parent link="link_5" />
+    <child link="link_6" />
+    <origin xyz="-0.01147370308941253 -0.008015481000974552 0.05859988226727852" rpy="0 0 0" />
+    <axis xyz="-0.7533200855035461 -0.6570066394243989 -0.02917403861634697" />
+  </joint>
+  <link name="tool_mount" />
+  <joint name="tool_mount_fixed" type="fixed">
+    <parent link="link_6" />
+    <child link="tool_mount" />
+    <origin xyz="0 0 0" rpy="1.601102972598419 -0.2737059068541681 -0.8617781283914342" />
+  </joint>
+  <link name="tcp" />
+  <joint name="tcp_fixed" type="fixed">
+    <parent link="tool_mount" />
+    <child link="tcp" />
+    <origin xyz="0 0 0.086526865671642" rpy="0 0 1.570796326794897" />
+  </joint>
+</robot>

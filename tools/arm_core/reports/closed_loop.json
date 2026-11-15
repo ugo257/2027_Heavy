@@ -1,0 +1,292 @@
+[
+  {
+    "type": "joint",
+    "perturbed_model": false,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      0.12,
+      -0.1,
+      0.08,
+      0.1,
+      0.12,
+      -0.08
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.566,
+    "position_error_m": 0.0007086048363199096,
+    "orientation_error_rad": 0.003408540499591534,
+    "max_abs_torque_Nm": [
+      2.9084243774414062,
+      7.466423034667969,
+      0.33113574981689453,
+      0.3135528564453125,
+      0.016117095947265625,
+      0.0009770393371582031
+    ],
+    "passed": true
+  },
+  {
+    "type": "joint",
+    "perturbed_model": true,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      -0.1,
+      0.12,
+      -0.1,
+      -0.08,
+      -0.1,
+      0.12
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.5010000000000001,
+    "position_error_m": 0.00312284566348659,
+    "orientation_error_rad": 0.011837740845593532,
+    "max_abs_torque_Nm": [
+      2.0732593536376953,
+      8.39438247680664,
+      0.4366302490234375,
+      0.4249086380004883,
+      0.013186931610107422,
+      0.0068378448486328125
+    ],
+    "passed": true
+  },
+  {
+    "type": "line",
+    "perturbed_model": false,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      0.12,
+      -0.1,
+      0.08,
+      0.1,
+      0.12,
+      -0.08
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.582,
+    "position_error_m": 0.0005028656680402914,
+    "orientation_error_rad": 0.0029686767306937242,
+    "max_abs_torque_Nm": [
+      2.9084243774414062,
+      7.466423034667969,
+      0.33113574981689453,
+      0.3076925277709961,
+      0.016117095947265625,
+      0.0009770393371582031
+    ],
+    "passed": true
+  },
+  {
+    "type": "line",
+    "perturbed_model": true,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      -0.1,
+      0.12,
+      -0.1,
+      -0.08,
+      -0.1,
+      0.12
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.5010000000000001,
+    "position_error_m": 0.0030939837685422487,
+    "orientation_error_rad": 0.011804689143920603,
+    "max_abs_torque_Nm": [
+      2.0732593536376953,
+      8.369964599609375,
+      0.4366302490234375,
+      0.41904735565185547,
+      0.013186931610107422,
+      0.0068378448486328125
+    ],
+    "passed": true
+  },
+  {
+    "type": "joint",
+    "perturbed_model": true,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      0.0862395917760769,
+      -0.13188590707053577,
+      0.08318684709697063,
+      0.1301780259067085,
+      0.10018903887754611,
+      -0.10018449412206568
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.554,
+    "position_error_m": 0.0023705248890986863,
+    "orientation_error_rad": 0.007019435811144665,
+    "max_abs_torque_Nm": [
+      2.7326011657714844,
+      8.321125030517578,
+      0.3721609115600586,
+      0.34871768951416016,
+      0.021977901458740234,
+      0.006837606430053711
+    ],
+    "passed": true
+  },
+  {
+    "type": "line",
+    "perturbed_model": false,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      -0.09091888149797263,
+      0.08351136870821753,
+      -0.07390373959914845,
+      -0.09232843341812053,
+      -0.11203696498402264,
+      0.15565667392497232
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.5010000000000001,
+    "position_error_m": 0.0006355288189777581,
+    "orientation_error_rad": 0.0020567848784683778,
+    "max_abs_torque_Nm": [
+      1.912088394165039,
+      7.637363433837891,
+      0.3663005828857422,
+      0.41318702697753906,
+      0.013186931610107422,
+      0.0009770393371582031
+    ],
+    "passed": true
+  },
+  {
+    "type": "joint",
+    "perturbed_model": false,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      0.08781671871149582,
+      -0.07597991487290282,
+      0.10692043689560374,
+      0.13554765658901116,
+      0.15567007106875058,
+      -0.06933542473343896
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.554,
+    "position_error_m": 0.0006795238793868148,
+    "orientation_error_rad": 0.003339092437926674,
+    "max_abs_torque_Nm": [
+      2.703296661376953,
+      7.466423034667969,
+      0.33699607849121094,
+      0.3135528564453125,
+      0.016117095947265625,
+      0.0009770393371582031
+    ],
+    "passed": true
+  },
+  {
+    "type": "line",
+    "perturbed_model": true,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      -0.13200375783495444,
+      0.14371290475791285,
+      -0.13925384427660376,
+      -0.11590263543961185,
+      -0.08884951928587052,
+      0.1535950412867619
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.5010000000000001,
+    "position_error_m": 0.0033353485050135654,
+    "orientation_error_rad": 0.01264768162027307,
+    "max_abs_torque_Nm": [
+      2.117216110229492,
+      8.431015014648438,
+      0.47179508209228516,
+      0.46007347106933594,
+      0.013186931610107422,
+      0.008791446685791016
+    ],
+    "passed": true
+  },
+  {
+    "type": "joint",
+    "perturbed_model": false,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      0.15210153371257892,
+      -0.08004563798280281,
+      0.1012788763422621,
+      0.08739150575988541,
+      0.15181430669244173,
+      -0.1133022706366772
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.576,
+    "position_error_m": 0.000567044282578646,
+    "orientation_error_rad": 0.0031933941465527352,
+    "max_abs_torque_Nm": [
+      3.3040294647216797,
+      7.466423034667969,
+      0.33699607849121094,
+      0.3194141387939453,
+      0.021977901458740234,
+      0.0009770393371582031
+    ],
+    "passed": true
+  },
+  {
+    "type": "line",
+    "perturbed_model": false,
+    "feedback_hz": 500,
+    "delay_ms": 2,
+    "goal_joint_angles_rad": [
+      -0.1359023193012539,
+      0.11739364762314206,
+      -0.13999186226757,
+      -0.05857249145726018,
+      -0.09126754960940969,
+      0.15178141243561802
+    ],
+    "real_DM_codec": true,
+    "mapping": "simulation identity A; physical mapping uncalibrated",
+    "duration_s": 1.0,
+    "settled_time_s": 1.5010000000000001,
+    "position_error_m": 0.0005795253061297071,
+    "orientation_error_rad": 0.002343714900233297,
+    "max_abs_torque_Nm": [
+      1.9853477478027344,
+      7.661781311035156,
+      0.4249086380004883,
+      0.39560413360595703,
+      0.01904773712158203,
+      0.0009770393371582031
+    ],
+    "passed": true
+  }
+]

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(arm_core C)
+set(CMAKE_C_STANDARD 11)
+add_library(arm_core STATIC src/arm_model.c src/arm_math.c src/arm_kinematics.c src/arm_dynamics.c src/arm_collision.c src/arm_plan.c src/arm_control.c src/arm_io.c src/arm_validate.c)
+target_include_directories(arm_core PUBLIC include)
+target_link_libraries(arm_core PUBLIC m)

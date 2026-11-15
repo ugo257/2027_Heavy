@@ -1,0 +1,37 @@
+{
+  "release": "v0.2-simulation",
+  "date": "2026-11-15",
+  "core_language": "C11 float, no heap allocation",
+  "numerical_cases": 300,
+  "near_seed_IK_success": 300,
+  "closed_loop_cases": 10,
+  "worst_final_position_error_mm": 3.3353485050135654,
+  "worst_final_orientation_error_deg": 0.7246587774668296,
+  "max_settled_time_s": 1.582,
+  "regression_tests_passed": true,
+  "workspace_survey": {
+    "COLLISION": 86517,
+    "OK": 47481,
+    "SINGULAR": 35
+  },
+  "workspace_cases": {
+    "passed": 205,
+    "plan_rejected": 41,
+    "tracking_failed": 13,
+    "control_failed": 1
+  },
+  "workspace_executed_cases_all_passed": false,
+  "workspace_IK": {
+    "near_seed": {
+      "OK": 512
+    },
+    "from_zero": {
+      "UNREACHABLE": 64,
+      "OK": 448
+    }
+  },
+  "hardware_ready": false,
+  "full_Infantry_linked": false,
+  "hardware_WCET_measured": false,
+  "global_workspace_validated": false
+}

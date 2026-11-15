@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "components": 140,
+  "native_mates": 406,
+  "checked_mates": 365,
+  "poses": 76,
+  "failures": [],
+  "not_evaluated": [
+    {
+      "mate": "重合5",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合6",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合45",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心65",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合46",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心67",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合56",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心78",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心79",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合57",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心93",
+      "reason": "Slip-ring rotor-to-holder interface. Whole imported slip ring is lumped upstream; internal rotor is not separated."
+    },
+    {
+      "mate": "重合78",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合79",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心113",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心114",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合81",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心117",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心118",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心153",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合109",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合111",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心155",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "相切6",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "相切7",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "LimitDistance1",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合125",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "宽度1",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "同心207",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "齿轮配合1",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "角度2",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "角度1",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "平行4",
+      "reason": "Saved-pose alignment between elbow side and forearm; would lock intended q3 roll. Requires mechanism confirmation; not enforced in six-axis model."
+    },
+    {
+      "mate": "宽度2",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "宽度3",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "宽度4",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "平行13",
+      "reason": "Saved-pose alignment between forearm and q4 motor support; would lock intended q4 pitch. Requires mechanism confirmation; not enforced in six-axis model."
+    },
+    {
+      "mate": "宽度5",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "宽度6",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "重合200",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "LimitDistance2",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    },
+    {
+      "mate": "宽度7",
+      "reason": "suppressed / assembly-context entity / complex mate type"
+    }
+  ],
+  "native_SW_multi_pose_solve_performed": false,
+  "source_sha256": "332348cd9288b664edb56a6e83cf98533c90a5bd00c685372a520553c4f42ea7"
+}
